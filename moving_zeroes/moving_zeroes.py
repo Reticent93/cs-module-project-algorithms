@@ -2,10 +2,19 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+
+
 def moving_zeroes(arr):
     # Your code here
-
-    pass
+    count = 0
+    tmp = []
+    for x in arr:
+        if x == 0 and type(x) == int:
+            count += 1
+        else:
+            tmp.append(x)
+    tmp.extend([0] * count)
+    return tmp
 
 
 if __name__ == '__main__':
